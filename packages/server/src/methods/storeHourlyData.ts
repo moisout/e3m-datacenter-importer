@@ -110,4 +110,10 @@ export const storeHourlyData = async (rawHourlyData: DatumData) => {
       });
     log.info(`Inserted/Updated ${entriesToInsert.length} entries.`);
   }
+
+  return {
+    inserted: entriesToInsert.length,
+    startTimestamp,
+    hoursNr,
+  };
 };

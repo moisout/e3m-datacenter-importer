@@ -16,7 +16,9 @@ export class E3MFetchJob extends Job {
       throw new Error('No hourly data found in the fetched data');
     }
 
-    await storeHourlyData(hourlyData.data);
+    const { hoursNr, inserted, startTimestamp } = await storeHourlyData(
+      hourlyData.data
+    );
 
     const end = performance.now();
     const runtime = end - start;
@@ -25,6 +27,9 @@ export class E3MFetchJob extends Job {
       timestamp: dayjs().toISOString(),
       runtime: `${runtime.toFixed(2)}ms`,
       dataLength: rawData.length,
+      hoursNr,
+      inserted,
+      startTimestamp,
     };
   }
 }
