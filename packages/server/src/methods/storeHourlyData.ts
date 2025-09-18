@@ -1,11 +1,14 @@
 import { convertHourlyUsage } from '@e3m/converter';
 import type { DatumData } from '@e3m/converter/types/SourceTypes.ts';
 import dayjs from 'dayjs';
-import { and, asc, desc, gte, lte, sql } from 'drizzle-orm';
+import { and, asc, desc, gte, lt, lte, sql } from 'drizzle-orm';
+import { logger } from 'sidequest';
 import { electricityTable } from '../../db/schema.ts';
 import { drizzleDb } from '../drizzle.ts';
 
 export const storeHourlyData = async (rawHourlyData: DatumData) => {
+  const log = logger('storeHourlyData');
+  log.info('Storing hourly data...');
   const latestDbEntry = await drizzleDb
     .select({
       maxTimestamp: electricityTable.timestamp,
@@ -47,11 +50,22 @@ export const storeHourlyData = async (rawHourlyData: DatumData) => {
 
   let sumNr: number | undefined;
 
-  for (const { sum, timestamp, value } of dbRange) {
-    if (sum) {
-      sumNr = parseFloat(sum);
-    }
+  const sumEntry = await drizzleDb
+    .select({
+      sum: electricityTable.sum,
+    })
+    .from(electricityTable)
+    .orderBy(desc(electricityTable.timestamp))
+    .where(lt(electricityTable.timestamp, startTimestamp))
+    .limit(1);
 
+  if (sumEntry[0]?.sum) {
+    sumNr = parseFloat(sumEntry[0].sum);
+  } else {
+    sumNr = 0;
+  }
+
+  for (const { sum, timestamp, value } of dbRange) {
     const newResult = resultMap.get(timestamp);
     if (newResult) {
       const dbValue = parseFloat(value);
@@ -94,5 +108,6 @@ export const storeHourlyData = async (rawHourlyData: DatumData) => {
           sum: sql.raw(`EXCLUDED.${electricityTable.sum.name}`),
         },
       });
+    log.info(`Inserted/Updated ${entriesToInsert.length} entries.`);
   }
 };

@@ -1,7 +1,6 @@
-import { Job } from 'sidequest';
-
 import { fetchData } from '@e3m/fetcher';
 import dayjs from 'dayjs';
+import { Job } from 'sidequest';
 import { storeHourlyData } from '../methods/storeHourlyData.ts';
 
 export class E3MFetchJob extends Job {

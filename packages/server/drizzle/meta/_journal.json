@@ -8,6 +8,13 @@
       "when": 1758153993588,
       "tag": "0000_rainy_cobalt_man",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1758155473802,
+      "tag": "0001_powerful_star_brand",
+      "breakpoints": true
     }
   ]
 }

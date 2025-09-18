@@ -1,0 +1,19 @@
+{
+  "dbcode.connections": [
+    {
+      "connectionId": "RWqxuJ4Po5C6mcSV7Zzzx",
+      "name": "e3m",
+      "driver": "postgres",
+      "connectionType": "host",
+      "host": "localhost",
+      "port": 5456,
+      "ssl": false,
+      "username": "e3m_user",
+      "password": "",
+      "savePassword": "secretStorage",
+      "database": "e3m_db",
+      "readOnly": false,
+      "connectionTimeout": 30
+    }
+  ]
+}
