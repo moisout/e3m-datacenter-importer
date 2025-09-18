@@ -1,7 +1,7 @@
 import { convertHourlyUsage } from '@e3m/converter';
 import type { DatumData } from '@e3m/converter/types/SourceTypes.ts';
 import dayjs from 'dayjs';
-import { and, asc, desc, gte, lte } from 'drizzle-orm';
+import { and, asc, desc, gte, lte, sql } from 'drizzle-orm';
 import { electricityTable } from '../../db/schema.ts';
 import { drizzleDb } from '../drizzle.ts';
 
@@ -87,6 +87,12 @@ export const storeHourlyData = async (rawHourlyData: DatumData) => {
     await drizzleDb
       .insert(electricityTable)
       .values(entriesToInsert)
-      .onConflictDoNothing();
+      .onConflictDoUpdate({
+        target: electricityTable.timestamp,
+        set: {
+          value: sql.raw(`EXCLUDED.${electricityTable.value.name}`),
+          sum: sql.raw(`EXCLUDED.${electricityTable.sum.name}`),
+        },
+      });
   }
 };
