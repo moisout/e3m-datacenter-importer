@@ -1,5 +1,5 @@
 {
-  "id": "f99e4dee-7608-45c2-952c-96565729192c",
+  "id": "28653656-b4ec-4fe3-ad52-9fcd33e5fd4f",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -27,7 +27,7 @@
         },
         "timestamp": {
           "name": "timestamp",
-          "type": "integer",
+          "type": "bigint",
           "primaryKey": false,
           "notNull": true
         },
@@ -47,7 +47,15 @@
       "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
+      "uniqueConstraints": {
+        "electricity_timestamp_unique": {
+          "name": "electricity_timestamp_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "timestamp"
+          ]
+        }
+      },
       "policies": {},
       "checkConstraints": {},
       "isRLSEnabled": false

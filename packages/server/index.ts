@@ -1,7 +1,7 @@
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
 import { Sidequest } from 'sidequest';
-import { E3MFetchJob } from './jobs/E3MFetchJob.ts';
 import { drizzleDb } from './src/drizzle.ts';
+import { E3MFetchJob } from './src/jobs/E3MFetchJob.ts';
 
 await Sidequest.start({
   backend: {
@@ -14,4 +14,8 @@ await Sidequest.start({
 
 await migrate(drizzleDb, { migrationsFolder: 'drizzle' });
 
-Sidequest.build(E3MFetchJob).unique(true).enqueue();
+await Sidequest.build(E3MFetchJob)
+  .unique(true)
+  .maxAttempts(1)
+  .enqueue();
+  // .schedule('*/15 * * * *');

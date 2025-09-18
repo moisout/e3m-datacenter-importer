@@ -1,11 +1,15 @@
 {
-  "name": "fetcher",
+  "name": "@e3m/fetcher",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "standalone": "node --env-file=../server/.env standalone.ts"
   },
-  "packageManager": "pnpm@10.16.1"
+  "packageManager": "pnpm@10.16.1",
+  "dependencies": {
+    "puppeteer": "24.22.0",
+    "sidequest": "1.7.1"
+  }
 }

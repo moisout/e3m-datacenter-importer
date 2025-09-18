@@ -1,28 +1,30 @@
 {
-  "name": "server",
+  "name": "@e3m/server",
   "version": "1.0.0",
   "private": true,
   "main": "index.ts",
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env index.ts",
+    "start:standalone": "node --env-file=.env src/fetcher/standalone.ts",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push"
+    "db:migrate": "drizzle-kit migrate"
   },
   "packageManager": "pnpm@10.16.1",
   "dependencies": {
+    "@e3m/converter": "workspace:",
+    "@e3m/fetcher": "workspace:",
     "@sidequest/postgres-backend": "1.7.1",
+    "dayjs": "1.11.18",
     "dotenv": "17.2.2",
     "drizzle-orm": "0.44.5",
     "fastify": "5.6.0",
-    "pg-native": "3.5.2",
+    "pg": "8.16.3",
     "sidequest": "1.7.1"
   },
   "devDependencies": {
     "@types/node": "24.5.1",
     "@types/pg": "8.15.5",
-    "drizzle-kit": "0.31.4",
-    "tsx": "4.20.5"
+    "drizzle-kit": "0.31.4"
   }
 }

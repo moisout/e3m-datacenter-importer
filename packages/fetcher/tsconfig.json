@@ -3,7 +3,10 @@
     "target": "esnext",
     "module": "nodenext",
     "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "esModuleInterop": true
+    "noEmit": true,
+    "esModuleInterop": true,
+    "strict": true
   }
 }
