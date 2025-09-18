@@ -17,5 +17,4 @@ await migrate(drizzleDb, { migrationsFolder: 'drizzle' });
 await Sidequest.build(E3MFetchJob)
   .unique(true)
   .maxAttempts(1)
-  .enqueue();
-  // .schedule('*/15 * * * *');
+  .schedule('*/15 * * * *');
