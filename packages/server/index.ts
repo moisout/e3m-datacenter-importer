@@ -10,11 +10,18 @@ await Sidequest.start({
       process.env.DATABASE_URL ||
       'postgres://e3m_user:e3m_password@localhost:5456/e3m_db',
   },
+  logger: {
+    level: 'info',
+  },
 });
 
 await migrate(drizzleDb, { migrationsFolder: 'drizzle' });
 
-await Sidequest.build(E3MFetchJob)
-  .unique(true)
-  .maxAttempts(1)
-  .schedule('*/15 * * * *');
+const e3mFetchJob = Sidequest.build(E3MFetchJob).unique(true).maxAttempts(1);
+
+setInterval(
+  () => {
+    e3mFetchJob.enqueue();
+  },
+  1000 * 60 * 15 // every 15 minutes
+);
