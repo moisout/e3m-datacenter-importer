@@ -12,8 +12,8 @@ importers:
         specifier: 3.6.2
         version: 3.6.2
       prettier-plugin-organize-imports:
-        specifier: 4.2.0
-        version: 4.2.0(prettier@3.6.2)(typescript@5.9.2)
+        specifier: 4.3.0
+        version: 4.3.0(prettier@3.6.2)(typescript@5.9.2)
 
   packages/converter:
     dependencies:
@@ -22,8 +22,8 @@ importers:
         version: 1.11.18
     devDependencies:
       '@types/node':
-        specifier: 24.5.1
-        version: 24.5.1
+        specifier: 24.5.2
+        version: 24.5.2
 
   packages/fetcher:
     dependencies:
@@ -31,8 +31,8 @@ importers:
         specifier: 24.22.0
         version: 24.22.0(typescript@5.9.2)
       sidequest:
-        specifier: 1.7.1
-        version: 1.7.1
+        specifier: 1.8.0
+        version: 1.8.0
 
   packages/server:
     dependencies:
@@ -43,8 +43,8 @@ importers:
         specifier: 'workspace:'
         version: link:../fetcher
       '@sidequest/postgres-backend':
-        specifier: 1.7.1
-        version: 1.7.1(pg-native@3.5.2)
+        specifier: 1.8.0
+        version: 1.8.0(pg-native@3.5.2)
       dayjs:
         specifier: 1.11.18
         version: 1.11.18
@@ -55,18 +55,18 @@ importers:
         specifier: 0.44.5
         version: 0.44.5(@types/pg@8.15.5)(knex@3.1.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))(pg@8.16.3(pg-native@3.5.2))
       fastify:
-        specifier: 5.6.0
-        version: 5.6.0
+        specifier: 5.6.1
+        version: 5.6.1
       pg:
         specifier: 8.16.3
         version: 8.16.3(pg-native@3.5.2)
       sidequest:
-        specifier: 1.7.1
-        version: 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+        specifier: 1.8.0
+        version: 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
     devDependencies:
       '@types/node':
-        specifier: 24.5.1
-        version: 24.5.1
+        specifier: 24.5.2
+        version: 24.5.2
       '@types/pg':
         specifier: 8.15.5
         version: 8.15.5
@@ -519,28 +519,28 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  '@sidequest/backend@1.7.1':
-    resolution: {integrity: sha512-qxN+dasUsWXQ4weOOL0wQEFTJ5aznUlCtbpiuYQXPTDEcgAcCtC70Q6a7PN8SHfvJeebC7k09JXF1rI8JllBJg==}
+  '@sidequest/backend@1.8.0':
+    resolution: {integrity: sha512-xIJo7igLF+nMRuZ4s+m6Rst/4pgSkjl6VrNkI5uqogO4zURft2b4VJ0zimd3fIZUT49Lab0ETs9heAoG7j6lQA==}
 
-  '@sidequest/core@1.7.1':
-    resolution: {integrity: sha512-dmunqdbit0mH7lzdXX1nccEwas5I6gwdJqEyVMKu+L5GHBLKkp9670zARQRMNLHe5z7RDDkTLwdqYDQdOSnRKw==}
+  '@sidequest/core@1.8.0':
+    resolution: {integrity: sha512-Q4Tk4c8weFQaxxmrRqyhRBAmOKuzHvQQgUYVSqG68/YGTxv09AWivqtHgpqoHw7Fp4XFDhSbRytylN7lLmYOaA==}
 
-  '@sidequest/dashboard@1.7.1':
-    resolution: {integrity: sha512-Fwo4/g8reyVrtWLBkMuDkscxD4MsKjacRmFTkSGSq8xuxzstRQ3Wb9Hvo0Ly0X6HSTxgMmkerKuexzNcZgfigA==}
+  '@sidequest/dashboard@1.8.0':
+    resolution: {integrity: sha512-Fh9hm6tEj+So4KCEjXpIj4VWbXk5k+pdc9BTq6CcWNvvgTZdnFDUUNK2EkHWVZEx+0xgcQbjQhe2PCjTi80q3A==}
 
-  '@sidequest/engine@1.7.1':
-    resolution: {integrity: sha512-86Clj9BVIHSUNeidpYChribmoiz+ghLGRFUc2b4x6lcsrn9ojYD0iynxJw4M8J7hWkTLdO6ZPuPJd925htIvFg==}
+  '@sidequest/engine@1.8.0':
+    resolution: {integrity: sha512-SsDvDY3U5pO+SjGSOrnmL8Y+C+sUKaa+WwSYGzobq2BquS7lkM/Twr3+LgrKVYEk/CBq3KGphWiXoH81vaODcA==}
     peerDependencies:
-      sidequest: 1.7.1
+      sidequest: 1.8.0
 
-  '@sidequest/postgres-backend@1.7.1':
-    resolution: {integrity: sha512-o0m/rsK1QyqJpRmWBFZo9FcfCm/nZTIUGabgMO7paHU3dj7O0u+JGnyuDwsiY8Qu5xg2P08WdBMBamDCBpUofA==}
+  '@sidequest/postgres-backend@1.8.0':
+    resolution: {integrity: sha512-9COR6Jm2UsYD45skyNxFiilohy5xFxM0A7GRukVDYKoLJmuKC7PBmLxV0q2/zlR9yjkLt7zBdsyicXvJOUnRXQ==}
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
 
-  '@types/node@24.5.1':
-    resolution: {integrity: sha512-/SQdmUP2xa+1rdx7VwB9yPq8PaKej8TD5cQ+XfKDPWWC+VDJU4rvVVagXqKUzhKjtFoNA8rXDJAkCxQPAe00+Q==}
+  '@types/node@24.5.2':
+    resolution: {integrity: sha512-FYxk1I7wPv3K2XBaoyH2cTnocQEu8AOZ60hPbsyukMPLv5/5qr7V1i8PLHdl6Zf87I+xZXFvPCXYjiTFq+YSDQ==}
 
   '@types/pg@8.15.5':
     resolution: {integrity: sha512-LF7lF6zWEKxuT3/OR8wAZGzkg4ENGXFNyiV/JeOt9z5B+0ZVwbql9McqX5c/WStFq1GaGso7H1AzP/qSzmlCKQ==}
@@ -1026,8 +1026,8 @@ packages:
   fast-uri@3.1.0:
     resolution: {integrity: sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==}
 
-  fastify@5.6.0:
-    resolution: {integrity: sha512-9j2r9TnwNsfGiCKGYT0Voqy244qwcoYM9qvNi/i+F8sNNWDnqUEVuGYNc9GyjldhXmMlJmVPS6gI1LdvjYGRJw==}
+  fastify@5.6.1:
+    resolution: {integrity: sha512-WjjlOciBF0K8pDUPZoGPhqhKrQJ02I8DKaDIfO51EL0kbSMwQFl85cRwhOvmSDWoukNOdTo27gLN549pLCcH7Q==}
 
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
@@ -1403,8 +1403,8 @@ packages:
   pino-std-serializers@7.0.0:
     resolution: {integrity: sha512-e906FRY0+tV27iq4juKzSYPbUj2do2X2JX4EzSca1631EB2QJQUqGbDuERal7LCtOpxl6x3+nvo9NPZcmjkiFA==}
 
-  pino@9.9.5:
-    resolution: {integrity: sha512-d1s98p8/4TfYhsJ09r/Azt30aYELRi6NNnZtEbqFw6BoGsdPVf5lKNK3kUwH8BmJJfpTLNuicjUQjaMbd93dVg==}
+  pino@9.11.0:
+    resolution: {integrity: sha512-+YIodBB9sxcWeR8PrXC2K3gEDyfkUuVEITOcbqrfcj+z5QW4ioIcqZfYFbrLTYLsmAwunbS7nfU/dpBB6PZc1g==}
     hasBin: true
 
   piscina@5.1.3:
@@ -1427,8 +1427,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  prettier-plugin-organize-imports@4.2.0:
-    resolution: {integrity: sha512-Zdy27UhlmyvATZi67BTnLcKTo8fm6Oik59Sz6H64PgZJVs6NJpPD1mT240mmJn62c98/QaL+r3kx9Q3gRpDajg==}
+  prettier-plugin-organize-imports@4.3.0:
+    resolution: {integrity: sha512-FxFz0qFhyBsGdIsb697f/EkvHzi5SZOhWAjxcx2dLt+Q532bAlhswcXGYB1yzjZ69kW8UoadFBw7TyNwlq96Iw==}
     peerDependencies:
       prettier: '>=2.0'
       typescript: '>=2.9'
@@ -1595,8 +1595,8 @@ packages:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
 
-  sidequest@1.7.1:
-    resolution: {integrity: sha512-aDHIECXzzXvcJhRr4jXKCPER9UJ2nYLs68FLMzc5vL9HlByTXYjnoFo2sgtIBhjHpArJPZola7r34E5M7fLHbA==}
+  sidequest@1.8.0:
+    resolution: {integrity: sha512-ebVH8ohGYojn7SrGKCflxWWeSu8Ws7y85sk2Ph3Qtrh3t3B45jPJ5q1OcaL4QXoeHrEoq/i6zE0/P0p8hu/jUQ==}
     engines: {node: '>=22.6.0'}
 
   simple-swizzle@0.2.4:
@@ -2056,9 +2056,9 @@ snapshots:
       - react-native-b4a
       - supports-color
 
-  '@sidequest/backend@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))':
+  '@sidequest/backend@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))':
     dependencies:
-      '@sidequest/core': 1.7.1
+      '@sidequest/core': 1.8.0
       knex: 3.1.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
     transitivePeerDependencies:
       - better-sqlite3
@@ -2070,16 +2070,16 @@ snapshots:
       - supports-color
       - tedious
 
-  '@sidequest/core@1.7.1':
+  '@sidequest/core@1.8.0':
     dependencies:
       safe-stable-stringify: 2.5.0
       winston: 3.17.0
 
-  '@sidequest/dashboard@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))':
+  '@sidequest/dashboard@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))':
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
-      '@sidequest/engine': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
+      '@sidequest/engine': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
       ejs: 3.1.10
       express: 5.1.0
       express-basic-auth: 1.2.1
@@ -2096,11 +2096,11 @@ snapshots:
       - supports-color
       - tedious
 
-  '@sidequest/dashboard@1.7.1(sidequest@1.7.1)':
+  '@sidequest/dashboard@1.8.0(sidequest@1.8.0)':
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
-      '@sidequest/engine': 1.7.1(sidequest@1.7.1)
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
+      '@sidequest/engine': 1.8.0(sidequest@1.8.0)
       ejs: 3.1.10
       express: 5.1.0
       express-basic-auth: 1.2.1
@@ -2117,13 +2117,13 @@ snapshots:
       - supports-color
       - tedious
 
-  '@sidequest/engine@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))':
+  '@sidequest/engine@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))':
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
       node-cron: 4.2.1
       piscina: 5.1.3
-      sidequest: 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      sidequest: 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
     transitivePeerDependencies:
       - better-sqlite3
       - mysql
@@ -2134,13 +2134,13 @@ snapshots:
       - supports-color
       - tedious
 
-  '@sidequest/engine@1.7.1(sidequest@1.7.1)':
+  '@sidequest/engine@1.8.0(sidequest@1.8.0)':
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
       node-cron: 4.2.1
       piscina: 5.1.3
-      sidequest: 1.7.1
+      sidequest: 1.8.0
     transitivePeerDependencies:
       - better-sqlite3
       - mysql
@@ -2151,10 +2151,10 @@ snapshots:
       - supports-color
       - tedious
 
-  '@sidequest/postgres-backend@1.7.1(pg-native@3.5.2)':
+  '@sidequest/postgres-backend@1.8.0(pg-native@3.5.2)':
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
       knex: 3.1.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
       pg: 8.16.3(pg-native@3.5.2)
     transitivePeerDependencies:
@@ -2168,13 +2168,13 @@ snapshots:
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
-  '@types/node@24.5.1':
+  '@types/node@24.5.2':
     dependencies:
       undici-types: 7.12.0
 
   '@types/pg@8.15.5':
     dependencies:
-      '@types/node': 24.5.1
+      '@types/node': 24.5.2
       pg-protocol: 1.10.3
       pg-types: 2.2.0
 
@@ -2182,7 +2182,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 24.5.1
+      '@types/node': 24.5.2
     optional: true
 
   abstract-logging@2.0.1: {}
@@ -2612,7 +2612,7 @@ snapshots:
 
   fast-uri@3.1.0: {}
 
-  fastify@5.6.0:
+  fastify@5.6.1:
     dependencies:
       '@fastify/ajv-compiler': 4.0.2
       '@fastify/error': 4.2.0
@@ -2623,7 +2623,7 @@ snapshots:
       fast-json-stringify: 6.0.1
       find-my-way: 9.3.0
       light-my-request: 6.6.0
-      pino: 9.9.5
+      pino: 9.11.0
       process-warning: 5.0.0
       rfdc: 1.4.1
       secure-json-parse: 4.0.0
@@ -3004,7 +3004,7 @@ snapshots:
 
   pino-std-serializers@7.0.0: {}
 
-  pino@9.9.5:
+  pino@9.11.0:
     dependencies:
       atomic-sleep: 1.0.0
       fast-redact: 3.5.0
@@ -3032,7 +3032,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  prettier-plugin-organize-imports@4.2.0(prettier@3.6.2)(typescript@5.9.2):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.6.2)(typescript@5.9.2):
     dependencies:
       prettier: 3.6.2
       typescript: 5.9.2
@@ -3234,12 +3234,12 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  sidequest@1.7.1:
+  sidequest@1.8.0:
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
-      '@sidequest/dashboard': 1.7.1(sidequest@1.7.1)
-      '@sidequest/engine': 1.7.1(sidequest@1.7.1)
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
+      '@sidequest/dashboard': 1.8.0(sidequest@1.8.0)
+      '@sidequest/engine': 1.8.0(sidequest@1.8.0)
     transitivePeerDependencies:
       - better-sqlite3
       - mysql
@@ -3250,12 +3250,12 @@ snapshots:
       - supports-color
       - tedious
 
-  sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)):
+  sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)):
     dependencies:
-      '@sidequest/backend': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
-      '@sidequest/core': 1.7.1
-      '@sidequest/dashboard': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
-      '@sidequest/engine': 1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.7.1(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
+      '@sidequest/backend': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))
+      '@sidequest/core': 1.8.0
+      '@sidequest/dashboard': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
+      '@sidequest/engine': 1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2))(sidequest@1.8.0(pg-native@3.5.2)(pg@8.16.3(pg-native@3.5.2)))
     transitivePeerDependencies:
       - better-sqlite3
       - mysql

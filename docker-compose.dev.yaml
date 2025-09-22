@@ -1,0 +1,11 @@
+services:
+  postgresql-dev:
+    image: postgres
+    container_name: e3m_postgresql-dev
+    shm_size: 1024mb
+    ports:
+      - '5456:5432'
+    environment:
+      POSTGRES_USER: e3m_user
+      POSTGRES_PASSWORD: e3m_password
+      POSTGRES_DB: e3m_db

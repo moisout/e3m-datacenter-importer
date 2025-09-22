@@ -12,6 +12,6 @@
     "dayjs": "1.11.18"
   },
   "devDependencies": {
-    "@types/node": "24.5.1"
+    "@types/node": "24.5.2"
   }
 }

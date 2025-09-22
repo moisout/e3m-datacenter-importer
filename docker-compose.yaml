@@ -9,3 +9,19 @@ services:
       POSTGRES_USER: e3m_user
       POSTGRES_PASSWORD: e3m_password
       POSTGRES_DB: e3m_db
+
+  e3m-importer:
+    env_file:
+      - 'packages/server/.env'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: e3m_importer
+    depends_on:
+      - postgresql
+    environment:
+      DATABASE_URL: postgres://e3m_user:e3m_password@postgresql:5432/e3m_db
+      SENSOR_NAME: sensor.electricity_consumption_rc1
+    ports:
+      - 8678:8678
+      - 8679:8679

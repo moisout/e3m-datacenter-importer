@@ -10,6 +10,6 @@
   "packageManager": "pnpm@10.16.1",
   "dependencies": {
     "puppeteer": "24.22.0",
-    "sidequest": "1.7.1"
+    "sidequest": "1.8.0"
   }
 }

@@ -14,16 +14,16 @@
   "dependencies": {
     "@e3m/converter": "workspace:",
     "@e3m/fetcher": "workspace:",
-    "@sidequest/postgres-backend": "1.7.1",
+    "@sidequest/postgres-backend": "1.8.0",
     "dayjs": "1.11.18",
     "dotenv": "17.2.2",
     "drizzle-orm": "0.44.5",
-    "fastify": "5.6.0",
+    "fastify": "5.6.1",
     "pg": "8.16.3",
-    "sidequest": "1.7.1"
+    "sidequest": "1.8.0"
   },
   "devDependencies": {
-    "@types/node": "24.5.1",
+    "@types/node": "24.5.2",
     "@types/pg": "8.15.5",
     "drizzle-kit": "0.31.4"
   }
