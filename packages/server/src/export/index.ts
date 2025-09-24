@@ -1,8 +1,13 @@
 import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone.js';
+import utc from 'dayjs/plugin/utc.js';
 import { desc } from 'drizzle-orm';
 import { electricityTable } from '../../db/schema.ts';
 import { drizzleDb } from '../drizzle.ts';
 import { createRoute } from '../methods/createRoute.ts';
+
+dayjs.extend(timezone);
+dayjs.extend(utc);
 
 export const exportRoute = createRoute({
   method: 'GET',
@@ -34,7 +39,9 @@ export const exportRoute = createRoute({
     const sensorName = process.env.SENSOR_NAME;
 
     const resultArray = data.map((entry) => {
-      const start = dayjs(entry.timestamp).format('DD.MM.YYYY HH:mm');
+      const start = dayjs(entry.timestamp)
+        .tz('Europe/Zurich')
+        .format('DD.MM.YYYY HH:mm');
 
       return {
         statistic_id: sensorName,

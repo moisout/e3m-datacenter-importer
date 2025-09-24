@@ -9,7 +9,7 @@
   },
   "packageManager": "pnpm@10.16.1",
   "dependencies": {
-    "puppeteer": "24.22.0",
+    "puppeteer": "24.22.2",
     "sidequest": "1.8.0"
   }
 }
