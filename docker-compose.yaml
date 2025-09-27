@@ -5,6 +5,8 @@ services:
     shm_size: 1024mb
     ports:
       - '5456:5432'
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: e3m_user
       POSTGRES_PASSWORD: e3m_password
