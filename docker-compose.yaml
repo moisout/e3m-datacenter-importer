@@ -1,6 +1,7 @@
 services:
   postgresql:
     image: postgres
+    restart: unless-stopped
     container_name: e3m_postgresql
     shm_size: 1024mb
     ports:
@@ -15,6 +16,7 @@ services:
   e3m-importer:
     env_file:
       - 'packages/server/.env'
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
